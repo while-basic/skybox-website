@@ -1,0 +1,29 @@
+Christopher Celaya
+Data Center Technician
+
+EXPERIENCE
+T5 Data Centers - Data Center Technician
+- Maintained mission-critical infrastructure with 100% uptime record
+- Managed power systems including redundancy configurations (2N, N+1)
+- Coordinated with contractors and vendor teams
+- Implemented systematic troubleshooting approaches during critical scenarios
+
+SKILLS
+- Critical Facilities Management
+- Power Systems Expertise
+- Industrial Automation
+- Advanced Troubleshooting
+- AI/ML Engineering
+- Data Infrastructure
+
+EDUCATION
+Bachelor's Degree in Electrical Engineering
+
+CERTIFICATIONS
+- Data Center Operations Certification
+- Industrial Systems Maintenance
+
+CONTACT
+Email: chris@example.com
+LinkedIn: linkedin.com/in/christophercelaya
+GitHub: github.com/while-basic 

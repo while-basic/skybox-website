@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
+import { useTheme } from '@/context/ThemeContext';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,17 +49,34 @@ const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="hidden md:flex space-x-8"
+          className="hidden md:flex items-center space-x-8"
         >
           <NavLink href="#why-me">Why Me</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#skybox">Skybox Advantage</NavLink>
           <NavLink href="#value">Value Proposition</NavLink>
-          <NavLink href="#contact" className="btn-primary">Contact</NavLink>
+          
+          <button 
+            type="button"
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
+          </button>
         </motion.nav>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile Menu Button and Theme Toggle */}
+        <div className="md:hidden flex items-center space-x-2">
+          <button 
+            type="button"
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
+          </button>
+          
           <button 
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -83,9 +102,6 @@ const Header = () => {
             <MobileNavLink href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</MobileNavLink>
             <MobileNavLink href="#skybox" onClick={() => setMobileMenuOpen(false)}>Skybox Advantage</MobileNavLink>
             <MobileNavLink href="#value" onClick={() => setMobileMenuOpen(false)}>Value Proposition</MobileNavLink>
-            <MobileNavLink href="#contact" onClick={() => setMobileMenuOpen(false)} className="btn-primary inline-block text-center">
-              Contact
-            </MobileNavLink>
           </div>
         </motion.div>
       )}

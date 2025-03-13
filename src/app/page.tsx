@@ -2,9 +2,10 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import WhyMe from '@/components/WhyMe';
 import Skills from '@/components/Skills';
+import Statistics from '@/components/Statistics';
+import DataCenterDiagram from '@/components/DataCenterDiagram';
 import SkyboxAdvantage from '@/components/SkyboxAdvantage';
 import ValueProposition from '@/components/ValueProposition';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -14,9 +15,10 @@ export default function Home() {
       <Hero />
       <WhyMe />
       <Skills />
+      <Statistics />
+      <DataCenterDiagram />
       <SkyboxAdvantage />
       <ValueProposition />
-      <Contact />
       <Footer />
     </main>
   );

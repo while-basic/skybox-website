@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaArrowDown, FaServer, FaTools, FaRobot } from 'react-icons/fa';
+import { FaArrowDown, FaServer, FaTools, FaRobot, FaFileDownload } from 'react-icons/fa';
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -97,10 +97,12 @@ const Hero = () => {
               <FaArrowDown className="animate-bounce" />
             </a>
             <a 
-              href="#contact" 
-              className="btn-outline"
+              href="/ChristopherCelaya_Resume.txt" 
+              download
+              className="btn-outline flex items-center justify-center gap-2"
             >
-              Let&apos;s Connect
+              Download Resume
+              <FaFileDownload />
             </a>
           </motion.div>
         </motion.div>
