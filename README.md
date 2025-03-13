@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skybox + Chris: Professional Portfolio Website
+
+A visually compelling and professional single-page website showcasing why Christopher Celaya is a top candidate for the technician role at Skybox Data Centers.
+
+## Features
+
+- **Modern Design**: Built with Next.js, React, and Tailwind CSS for a clean, professional look
+- **Fully Responsive**: Optimized for all device sizes from mobile to desktop
+- **Animated UI**: Smooth animations and transitions using Framer Motion
+- **Dark Mode Support**: Automatic theme switching based on user preferences
+- **Performance Optimized**: Fast loading and rendering for an excellent user experience
+- **Contact Form**: Interactive form for potential employers to reach out
+
+## Technologies Used
+
+- **Next.js 15**: React framework with server-side rendering capabilities
+- **React 19**: JavaScript library for building user interfaces
+- **TypeScript**: Type-safe JavaScript for better developer experience
+- **Tailwind CSS 3**: Utility-first CSS framework for rapid UI development
+- **Framer Motion**: Animation library for React
+- **React Icons**: Icon library for React applications
+- **React Intersection Observer**: Utility for triggering animations on scroll
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/skybox-website.git
+   cd skybox-website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+### Deployment
+
+You can use the included deployment script to build and run the production server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+./deploy.sh
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This script will:
+1. Install all dependencies
+2. Build the project for production
+3. Start the production server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: Main application pages and layouts
+- `src/components`: Reusable React components
+- `public`: Static assets like images and fonts
+- `tailwind.config.js`: Tailwind CSS configuration
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This website can be easily deployed to Vercel, Netlify, or any other static site hosting platform.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The easiest way to deploy this website is to use the [Vercel Platform](https://vercel.com/new).
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- Skybox Data Centers for the inspiration
+- Next.js team for the amazing framework
+- Tailwind CSS team for the utility-first CSS framework
+- Framer Motion team for the animation library
