@@ -30,84 +30,99 @@ const ValueProposition = () => {
   };
 
   return (
-    <section id="value" className="py-20 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="value" className="py-20">
+      <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="section-title">My Unique Value to Skybox</h2>
-            <p className="text-lg text-secondary/80 dark:text-light/80 max-w-3xl mx-auto">
-              With data center experience at T5 and deep knowledge of emerging AI technologies, I offer Skybox a technician who can bridge today&apos;s operations with tomorrow&apos;s innovations.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              My Unique <span className="text-primary">Value</span> to Skybox
+            </h2>
+            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              With data center experience at T5 and deep knowledge of emerging AI technologies, I offer Skybox a technician who can bridge today's operations with tomorrow's innovations.
             </p>
           </motion.div>
 
           <motion.div 
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="space-y-8"
           >
-            <motion.div
-              variants={itemVariants}
-              className="card text-center hover:border-primary transition-colors"
-            >
-              <div className="flex justify-center mb-4">
-                <FaTools className="text-primary text-4xl" />
+            <motion.div variants={itemVariants} className="card">
+              <div className="flex items-center mb-4">
+                <FaBrain className="text-primary text-3xl mr-4" />
+                <h3 className="text-2xl font-semibold text-white">AI Infrastructure Expertise</h3>
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-secondary dark:text-light">Immediate Value</h4>
-              <ul className="text-left text-secondary/80 dark:text-light/80 space-y-2">
-                <li>● Experienced data center technician</li>
-                <li>● 100% uptime track record</li>
-                <li>● Industrial systems troubleshooting</li>
-                <li>● Power systems expertise (2N, N+1)</li>
+              <p className="text-white/80 mb-4">
+                My hands-on experience with AI systems gives me unique insight into the infrastructure demands of next-generation computing. I understand the cooling, power, and connectivity requirements that AI workloads place on data centers.
+              </p>
+              <ul className="space-y-2 text-white/80">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Experience with high-density computing environments and their unique challenges</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Understanding of GPU infrastructure requirements for AI/ML workloads</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Knowledge of cooling solutions for high-performance computing</span>
+                </li>
               </ul>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="card text-center hover:border-primary transition-colors"
-            >
-              <div className="flex justify-center mb-4">
-                <FaBrain className="text-primary text-4xl" />
+            <motion.div variants={itemVariants} className="card">
+              <div className="flex items-center mb-4">
+                <FaBolt className="text-primary text-3xl mr-4" />
+                <h3 className="text-2xl font-semibold text-white">Operational Excellence</h3>
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-secondary dark:text-light">AI-Ready Skills</h4>
-              <ul className="text-left text-secondary/80 dark:text-light/80 space-y-2">
-                <li>● LLM application development</li>
-                <li>● Experience with H100s & A100s GPUs</li>
-                <li>● Understanding of AI cooling needs</li>
-                <li>● Modern software stack knowledge</li>
+              <p className="text-white/80 mb-4">
+                My track record of 100% uptime in mission-critical environments demonstrates my commitment to operational excellence. I bring a systematic approach to maintenance and troubleshooting that ensures reliability.
+              </p>
+              <ul className="space-y-2 text-white/80">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Proven ability to maintain critical systems with zero downtime</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Experience with preventative maintenance programs and emergency response</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Strong documentation and process improvement skills</span>
+                </li>
               </ul>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="card text-center hover:border-primary transition-colors"
-            >
-              <div className="flex justify-center mb-4">
-                <FaBolt className="text-primary text-4xl" />
+            <motion.div variants={itemVariants} className="card">
+              <div className="flex items-center mb-4">
+                <FaTools className="text-primary text-3xl mr-4" />
+                <h3 className="text-2xl font-semibold text-white">Technical Versatility</h3>
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-secondary dark:text-light">Long-Term Asset</h4>
-              <ul className="text-left text-secondary/80 dark:text-light/80 space-y-2">
-                <li>● Self-taught in cutting-edge tech</li>
-                <li>● Continuous learning mindset</li>
-                <li>● Insight into future data center needs</li>
-                <li>● Committed to operational excellence</li>
+              <p className="text-white/80 mb-4">
+                My diverse technical background allows me to work across multiple domains, from traditional data center infrastructure to cutting-edge technologies. This versatility makes me an asset in evolving technical environments.
+              </p>
+              <ul className="space-y-2 text-white/80">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Proficiency with both mechanical and electrical systems</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Software skills for automation and monitoring</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">→</span>
+                  <span>Ability to quickly learn and adapt to new technologies</span>
+                </li>
               </ul>
             </motion.div>
-          </motion.div>
-
-          <motion.div 
-            variants={itemVariants}
-            className="mt-16 text-center"
-          >
-            <p className="text-lg text-secondary/80 dark:text-light/80">
-              As data centers evolve to meet the demands of AI computing, you need technicians who understand both 
-              traditional infrastructure and next-generation requirements. My unique background in both worlds 
-              positions me to help Skybox maintain operational excellence today while building for tomorrow&apos;s needs.
-            </p>
           </motion.div>
         </motion.div>
       </div>

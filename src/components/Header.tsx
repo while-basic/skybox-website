@@ -28,7 +28,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 dark:bg-dark/90 backdrop-blur-md shadow-md py-3' 
+          ? 'bg-dark/90 backdrop-blur-md shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -39,8 +39,8 @@ const Header = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center"
         >
-          <Link href="/" className="text-2xl font-bold text-primary">
-            Skybox <span className="text-secondary dark:text-light">+ Chris</span>
+          <Link href="/" className="text-2xl font-bold">
+            <span className="text-primary">Skybox</span> <span className="text-white">+ Chris</span>
           </Link>
         </motion.div>
 
@@ -80,7 +80,7 @@ const Header = () => {
           <button 
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-secondary dark:text-light p-2"
+            className="text-white p-2"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -95,7 +95,7 @@ const Header = () => {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white dark:bg-dark shadow-lg"
+          className="md:hidden bg-dark shadow-lg"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <MobileNavLink href="#why-me" onClick={() => setMobileMenuOpen(false)}>Why Me</MobileNavLink>
@@ -112,7 +112,7 @@ const Header = () => {
 const NavLink = ({ href, children, className = '' }: { href: string; children: React.ReactNode; className?: string }) => (
   <Link 
     href={href} 
-    className={`text-secondary dark:text-light hover:text-primary dark:hover:text-accent font-medium transition-colors ${className}`}
+    className={`text-white hover:text-primary font-medium transition-colors ${className}`}
   >
     {children}
   </Link>
@@ -132,7 +132,7 @@ const MobileNavLink = ({
   <Link 
     href={href} 
     onClick={onClick}
-    className={`block py-2 text-secondary dark:text-light hover:text-primary dark:hover:text-accent font-medium transition-colors ${className}`}
+    className={`block py-2 text-white hover:text-primary font-medium transition-colors ${className}`}
   >
     {children}
   </Link>

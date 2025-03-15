@@ -49,127 +49,81 @@ const WhyMe = () => {
       description: "Deep experience with cutting-edge AI/ML technologies and hands-on projects",
     },
     {
-      id: "troubleshooting",
+      id: "automation",
       icon: <FaTools className="text-primary text-3xl" />,
-      title: "Advanced Troubleshooting",
-      description: "Systematic approach to maintaining operations during critical scenarios",
+      title: "Industrial Automation",
+      description: "Expertise in automating industrial processes and systems integration",
+    },
+    {
+      id: "data",
+      icon: <FaDatabase className="text-primary text-3xl" />,
+      title: "Data Infrastructure",
+      description: "Strong understanding of data center infrastructure and operations",
+    },
+    {
+      id: "development",
+      icon: <FaCode className="text-primary text-3xl" />,
+      title: "Software Development",
+      description: "Full-stack development skills with focus on infrastructure automation",
     },
   ];
 
+  const keyPoints = [
+    { id: "uptime", text: "100% uptime track record in mission-critical environments" },
+    { id: "electrical", text: "Extensive experience with industrial electrical systems" },
+    { id: "ai-ml", text: "Hands-on AI/ML engineering expertise" },
+    { id: "problem-solving", text: "Strong problem-solving and troubleshooting skills" },
+    { id: "pressure", text: "Proven ability to work under pressure in critical situations" },
+    { id: "learning", text: "Continuous learner with passion for emerging technologies" },
+    { id: "teamwork", text: "Team player with excellent communication skills" },
+    { id: "excellence", text: "Dedicated to operational excellence and reliability" },
+  ];
+
   return (
-    <section id="why-me" className="py-20 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="why-me" className="py-20">
+      <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="section-title">Why I&apos;m the Perfect Fit for Skybox</h2>
-            <p className="text-lg text-secondary/80 dark:text-light/80 max-w-3xl mx-auto">
-              My unique background combines critical data center experience with advanced AI/ML knowledge—
-              exactly what Skybox needs as you position for the AI infrastructure surge.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Why I'm Perfect for <span className="text-primary">Skybox</span>
+            </h2>
+            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              My unique combination of data center experience, industrial systems expertise, and AI/ML knowledge makes me an ideal fit for Skybox's innovative approach to data infrastructure.
             </p>
           </motion.div>
 
-          <motion.h3 
-            variants={itemVariants}
-            className="text-2xl font-semibold mb-8 text-primary"
-          >
-            Data Center & Technical Experience
-          </motion.h3>
-
           <motion.div 
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+            variants={itemVariants}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
             {skills.map((skill) => (
-              <motion.div
+              <div 
                 key={skill.id}
-                variants={itemVariants}
-                className="card flex items-start gap-4 hover:border-primary transition-colors"
+                className="card"
               >
-                <div className="mt-1">{skill.icon}</div>
-                <div>
-                  <h4 className="text-xl font-semibold mb-2 text-secondary dark:text-light">{skill.title}</h4>
-                  <p className="text-secondary/80 dark:text-light/80">{skill.description}</p>
-                </div>
-              </motion.div>
+                <div className="mb-4">{skill.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{skill.title}</h3>
+                <p className="text-white/70">{skill.description}</p>
+              </div>
             ))}
           </motion.div>
 
-          <motion.h3 
-            variants={itemVariants}
-            className="text-2xl font-semibold mb-8 text-primary"
-          >
-            Adding Unique Value to Skybox
-          </motion.h3>
-
-          <motion.div variants={containerVariants} className="space-y-6">
-            <motion.div variants={itemVariants} className="card hover:border-primary transition-colors">
-              <h4 className="text-xl font-semibold mb-4 text-secondary dark:text-light flex items-center gap-2">
-                <FaRobot className="text-primary" />
-                AI Infrastructure Knowledge
-              </h4>
-              <ul className="space-y-3 text-secondary/80 dark:text-light/80">
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Built and deployed production LLM applications using Llama2, TensorFlow, and PyTorch</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Hands-on experience with NVIDIA H100s & A100s—the GPUs driving today&apos;s AI data centers</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Deep understanding of the cooling, power, and infrastructure requirements for high-density AI compute</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="card hover:border-primary transition-colors">
-              <h4 className="text-xl font-semibold mb-4 text-secondary dark:text-light flex items-center gap-2">
-                <FaCode className="text-primary" />
-                Technical Versatility
-              </h4>
-              <ul className="space-y-3 text-secondary/80 dark:text-light/80">
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Experience with modern software stacks (JavaScript, TypeScript, Next.js, Python) for automation and monitoring</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Proficient with industrial automation systems including HMI panels, SCADA, and predictive maintenance</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Knowledge of Docker, AWS, Azure, SQL, and MongoDB for modern infrastructure environments</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="card hover:border-primary transition-colors">
-              <h4 className="text-xl font-semibold mb-4 text-secondary dark:text-light flex items-center gap-2">
-                <FaDatabase className="text-primary" />
-                Positioning Skybox for the Future
-              </h4>
-              <ul className="space-y-3 text-secondary/80 dark:text-light/80">
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Committed to 100% uptime and operational excellence in mission-critical environments</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Constantly learning and adapting to emerging technologies in both data centers and AI</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
-                  <span>Bring practical insights on next-generation computational demands and infrastructure requirements</span>
-                </li>
-              </ul>
-            </motion.div>
+          <motion.div variants={itemVariants} className="card">
+            <h3 className="text-2xl font-semibold mb-6 text-white">Key Qualifications</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {keyPoints.map((point) => (
+                <div key={point.id} className="flex items-start">
+                  <FaCheckCircle className="text-primary mt-1 mr-3 flex-shrink-0" />
+                  <p className="text-white/80">{point.text}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>

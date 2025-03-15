@@ -51,57 +51,59 @@ const SkyboxAdvantage = () => {
     {
       id: "partnership",
       icon: <FaHandshake className="text-primary text-3xl" />,
-      title: "Prologis Partnership",
-      description: "Growth-oriented business model",
+      title: "Client Partnership",
+      description: "Collaborative approach to data center solutions",
     },
   ];
 
   return (
-    <section id="skybox" className="py-20 bg-white dark:bg-secondary/10">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="skybox" className="py-20">
+      <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="section-title">The Skybox Advantage</h2>
-            <p className="text-lg text-secondary/80 dark:text-light/80 max-w-3xl mx-auto">
-              What excites me about joining your team goes beyond just a job opportunity - 
-              it&apos;s about being part of a forward-thinking organization building the 
-              infrastructure for tomorrow&apos;s technology.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              The <span className="text-primary">Skybox</span> Advantage
+            </h2>
+            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              Skybox Data Centers leads the industry with innovative, sustainable, and high-performance facilities designed for the future of computing.
             </p>
-          </motion.div>
-
-          <motion.div 
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {advantages.map((advantage) => (
-              <motion.div
-                key={advantage.id}
-                variants={itemVariants}
-                className="card flex items-start gap-4 hover:border-primary transition-colors"
-              >
-                <div className="mt-1">{advantage.icon}</div>
-                <div>
-                  <h4 className="text-xl font-semibold mb-2 text-secondary dark:text-light">{advantage.title}</h4>
-                  <p className="text-secondary/80 dark:text-light/80">{advantage.description}</p>
-                </div>
-              </motion.div>
-            ))}
           </motion.div>
 
           <motion.div 
             variants={itemVariants}
-            className="mt-16 text-center"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
           >
-            <p className="text-lg text-secondary/80 dark:text-light/80 italic">
-              &quot;I&apos;m not just looking for a job – I&apos;m looking to contribute to a company that&apos;s 
-              building the infrastructure backbone for the AI revolution.&quot;
-            </p>
+            {advantages.map((advantage) => (
+              <div 
+                key={advantage.id}
+                className="card"
+              >
+                <div className="mb-4">{advantage.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{advantage.title}</h3>
+                <p className="text-white/70">{advantage.description}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="card">
+            <h3 className="text-2xl font-semibold mb-6 text-white">How I'll Contribute to Skybox's Success</h3>
+            <div className="space-y-4">
+              <p className="text-white/80">
+                My experience maintaining mission-critical infrastructure with 100% uptime directly aligns with Skybox's commitment to reliability and performance. I understand the demands of high-density computing environments and can help ensure your facilities meet the growing needs of AI and machine learning workloads.
+              </p>
+              <p className="text-white/80">
+                With my background in both traditional data center operations and cutting-edge technologies, I can bridge the gap between current infrastructure and future requirements, helping Skybox maintain its competitive edge in the rapidly evolving data center landscape.
+              </p>
+              <p className="text-white/80">
+                I'm excited about the opportunity to contribute to Skybox's growth and innovation, bringing my unique combination of skills to help drive the company's continued success.
+              </p>
+            </div>
           </motion.div>
         </motion.div>
       </div>

@@ -3,25 +3,22 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #1E293B;
+  --background: #0F172A;
+  --foreground: #FFFFFF;
   --primary: #0047AB;
-  --secondary: #1E293B;
+  --secondary: #FFFFFF;
   --accent: #38BDF8;
   --font-family: 'Poppins', sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0F172A;
-    --foreground: #F8FAFC;
-  }
+  --card-bg: rgba(15, 23, 42, 0.5);
+  --card-border: #1f2937;
 }
 
 body {
-  background-color: var(--background);
+  background: linear-gradient(135deg, #0F172A 0%, #0A1022 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-family);
+  min-height: 100vh;
 }
 
 @layer components {
@@ -40,7 +37,7 @@ body {
 
   .btn-outline {
     border: 2px solid var(--primary);
-    color: var(--primary);
+    color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
     font-weight: 500;
@@ -69,22 +66,17 @@ body {
   }
 
   .card {
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 0.75rem;
     padding: 1.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.2s;
+    backdrop-filter: blur(8px);
   }
 
   .card:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .card {
-      background-color: var(--background);
-      border-color: #1f2937;
-    }
+    border-color: var(--primary);
   }
 }

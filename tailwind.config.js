@@ -9,10 +9,10 @@ module.exports = {
     extend: {
       colors: {
         primary: '#0047AB', // Skybox blue
-        secondary: '#1E293B', // Dark slate blue
+        secondary: '#FFFFFF', // White
         accent: '#38BDF8', // Light blue
         dark: '#0F172A',
-        light: '#F8FAFC',
+        light: '#FFFFFF',
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'Poppins', 'sans-serif'],

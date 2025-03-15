@@ -31,9 +31,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-16 px-4 md:px-0">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-light to-white dark:from-dark dark:to-secondary/20 -z-10" />
-      
       {/* Decorative elements */}
       <div className="absolute top-20 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
@@ -48,75 +45,69 @@ const Hero = () => {
         >
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary"
+            className="text-4xl md:text-6xl font-bold mb-6 text-white"
           >
-            Skybox + Christopher Celaya
+            <span className="text-primary">Skybox</span> + Christopher Celaya
           </motion.h1>
           
           <motion.h2 
             variants={itemVariants}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-secondary dark:text-light"
+            className="text-2xl md:text-4xl font-semibold mb-8 text-white"
           >
             Data Center Expertise + Future-Ready Technical Skills
           </motion.h2>
           
           <motion.p 
             variants={itemVariants}
-            className="text-lg md:text-xl text-secondary/80 dark:text-light/80 mb-6 leading-relaxed"
+            className="text-lg md:text-xl mb-10 text-white/90 leading-relaxed"
           >
             Former T5 Data Centers technician with 100% uptime track record, bringing 11+ years of industrial systems experience and cutting-edge AI/ML knowledge to help Skybox lead in next-generation data infrastructure.
           </motion.p>
-
-          <motion.div
+          
+          <motion.div 
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-6 mb-10"
+            className="flex flex-wrap justify-center gap-4 mb-16"
           >
-            <div className="flex items-center gap-2">
-              <FaServer className="text-primary text-xl" />
-              <span className="font-medium">Critical Facilities Experience</span>
+            <div className="flex items-center text-white">
+              <FaServer className="text-primary mr-2 text-xl" /> 
+              <span>Critical Facilities Experience</span>
             </div>
-            <div className="flex items-center gap-2">
-              <FaTools className="text-primary text-xl" />
-              <span className="font-medium">Industrial Automation</span>
+            <div className="flex items-center text-white">
+              <FaTools className="text-primary mr-2 text-xl" /> 
+              <span>Industrial Automation</span>
             </div>
-            <div className="flex items-center gap-2">
-              <FaRobot className="text-primary text-xl" />
-              <span className="font-medium">AI/ML Engineering</span>
+            <div className="flex items-center text-white">
+              <FaRobot className="text-primary mr-2 text-xl" /> 
+              <span>AI/ML Engineering</span>
             </div>
           </motion.div>
           
           <motion.div 
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <a 
               href="#why-me" 
-              className="btn-primary flex items-center justify-center gap-2"
+              className="btn-primary flex items-center justify-center"
             >
-              Why I&apos;m Perfect for Skybox
-              <FaArrowDown className="animate-bounce" />
+              Why I'm Perfect for Skybox <FaArrowDown className="ml-2" />
             </a>
+            
             <a 
-              href="/ChristopherCelaya_Resume.txt" 
-              download
-              className="btn-outline flex items-center justify-center gap-2"
+              href="/resume.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline flex items-center justify-center"
             >
-              Download Resume
-              <FaFileDownload />
+              Download Resume <FaFileDownload className="ml-2" />
             </a>
           </motion.div>
         </motion.div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-sm text-secondary/60 dark:text-light/60 mb-2">Scroll to explore</span>
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-        >
-          <FaArrowDown className="text-primary" />
-        </motion.div>
+      <div className="absolute bottom-8 left-0 right-0 text-center animate-bounce">
+        <p className="text-white/70 text-sm">Scroll to explore</p>
+        <FaArrowDown className="mx-auto mt-2 text-primary" />
       </div>
     </section>
   );
