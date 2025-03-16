@@ -8,18 +8,10 @@ import { useEffect } from 'react';
 import { 
   FaServer, 
   FaBolt, 
-  FaTools, 
-  FaRobot, 
-  FaBrain, 
-  FaDatabase, 
   FaSnowflake, 
   FaNetworkWired, 
   FaShieldAlt, 
-  FaChartLine,
-  FaTachometerAlt,
-  FaClipboardCheck,
-  FaUserClock,
-  FaExclamationTriangle
+  FaChartLine
 } from 'react-icons/fa';
 
 // Define skill type
@@ -27,15 +19,6 @@ interface Skill {
   id: string;
   icon: ReactNode;
   name: string;
-  description: string;
-}
-
-// Define metric type
-interface Metric {
-  id: string;
-  icon: ReactNode;
-  name: string;
-  value: string;
   description: string;
 }
 
@@ -71,18 +54,6 @@ const Skills = () => {
       transition: { 
         duration: 0.7, 
         ease: [0.25, 0.1, 0.25, 1.0],
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { 
-        duration: 0.5, 
-        ease: "easeOut" 
       },
     },
   };
@@ -129,19 +100,6 @@ const Skills = () => {
     },
   };
 
-  const valueVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { 
-        delay: 0.3,
-        duration: 0.5, 
-        ease: "easeOut" 
-      },
-    },
-  };
-
   const technicalExpertise: Skill[] = [
     {
       id: "datacenter",
@@ -181,64 +139,6 @@ const Skills = () => {
     }
   ];
 
-  const additionalSkills: Skill[] = [
-    {
-      id: "automation",
-      icon: <FaRobot className="text-primary text-2xl" />,
-      name: "Industrial Automation",
-      description: "Proficient with industrial automation systems, SCADA, and control systems integration. Experience implementing automated monitoring and control solutions for critical infrastructure components."
-    },
-    {
-      id: "ai",
-      icon: <FaBrain className="text-primary text-2xl" />,
-      name: "AI/ML Engineering",
-      description: "Hands-on experience with machine learning frameworks, model deployment, and AI infrastructure requirements. Understanding of specialized cooling and power needs for high-density GPU clusters used in AI workloads."
-    },
-    {
-      id: "troubleshooting",
-      icon: <FaTools className="text-primary text-2xl" />,
-      name: "Advanced Troubleshooting",
-      description: "Expert-level ability to diagnose and resolve complex technical issues in critical environments. Systematic approach to root cause analysis and implementing preventative measures to avoid recurrence."
-    },
-    {
-      id: "infrastructure",
-      icon: <FaDatabase className="text-primary text-2xl" />,
-      name: "Infrastructure Design",
-      description: "Knowledge of modern data center design principles, cooling systems, and high-density deployments. Experience evaluating infrastructure requirements for various workload types and recommending appropriate solutions."
-    }
-  ];
-
-  const performanceMetrics: Metric[] = [
-    {
-      id: "uptime",
-      icon: <FaTachometerAlt className="text-primary text-2xl" />,
-      name: "Uptime Achievement",
-      value: "100%",
-      description: "Maintained perfect uptime across all critical systems during my tenure at T5 Data Centers, exceeding industry standards and SLA requirements."
-    },
-    {
-      id: "mttr",
-      icon: <FaUserClock className="text-primary text-2xl" />,
-      name: "Mean Time to Repair",
-      value: "<30 min",
-      description: "Consistently resolved critical infrastructure issues in under 30 minutes, minimizing potential impact on operations and maintaining service continuity."
-    },
-    {
-      id: "incidents",
-      icon: <FaExclamationTriangle className="text-primary text-2xl" />,
-      name: "Incident Prevention",
-      value: "95%",
-      description: "Implemented proactive maintenance protocols that prevented potential incidents, resulting in a 95% reduction in unplanned interventions."
-    },
-    {
-      id: "compliance",
-      icon: <FaClipboardCheck className="text-primary text-2xl" />,
-      name: "Compliance Adherence",
-      value: "100%",
-      description: "Maintained full compliance with industry standards and regulations, ensuring all systems and procedures met or exceeded requirements during audits."
-    }
-  ];
-
   return (
     <section id="skills" className="py-20 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -250,165 +150,34 @@ const Skills = () => {
           className="max-w-5xl mx-auto"
         >
           <motion.div variants={sectionVariants} className="text-center mb-16">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-6 text-white"
-              initial={{ opacity: 0, y: -20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              Technical <motion.span 
-                className="text-primary"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >Expertise</motion.span>
-            </motion.h2>
-            <motion.p 
-              className="text-lg text-white/80 max-w-3xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.7, delay: 0.6 }}
-            >
-              My expertise spans critical infrastructure management, industrial systems, and cutting-edge technologies—a unique combination that positions me to help Skybox lead in next-generation data infrastructure.
-            </motion.p>
+            <h2 className="section-title">Technical Expertise</h2>
+            <p className="section-subtitle">
+              My specialized skills in data center infrastructure and critical systems management
+            </p>
           </motion.div>
 
-          <motion.div variants={sectionVariants} className="mb-12">
-            <motion.h3 
-              className="text-2xl font-semibold mb-8 text-white border-b border-primary/30 pb-2"
-              initial={{ opacity: 0, x: -30 }}
-              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-              transition={{ duration: 0.5 }}
-            >
-              Data Center Infrastructure Expertise
-            </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {technicalExpertise.map((skill, index) => (
-                <motion.div
-                  key={skill.id}
-                  custom={index}
-                  variants={cardVariants}
+          <motion.div 
+            variants={sectionVariants}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          >
+            {technicalExpertise.map((skill) => (
+              <motion.div
+                key={skill.id}
+                variants={cardVariants}
+                whileHover="hover"
+                className="card p-6 h-full flex flex-col"
+              >
+                <motion.div 
+                  variants={iconVariants}
                   whileHover="hover"
-                  className="card"
+                  className="mb-4"
                 >
-                  <div className="flex items-center mb-4">
-                    <motion.div 
-                      className="mr-3 bg-primary/10 p-3 rounded-full"
-                      variants={iconVariants}
-                      whileHover="hover"
-                    >
-                      {skill.icon}
-                    </motion.div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
-                    </div>
-                  </div>
-                  
-                  <motion.p 
-                    className="text-white/80"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 + (index * 0.1), duration: 0.6 }}
-                  >
-                    {skill.description}
-                  </motion.p>
+                  {skill.icon}
                 </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div variants={sectionVariants} className="mb-12">
-            <motion.h3 
-              className="text-2xl font-semibold mb-8 text-white border-b border-primary/30 pb-2"
-              initial={{ opacity: 0, x: -30 }}
-              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-              transition={{ duration: 0.5 }}
-            >
-              Performance Metrics
-            </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {performanceMetrics.map((metric, index) => (
-                <motion.div
-                  key={metric.id}
-                  custom={index}
-                  variants={cardVariants}
-                  whileHover="hover"
-                  className="card"
-                >
-                  <div className="flex items-center mb-4">
-                    <motion.div 
-                      className="mr-3 bg-primary/10 p-3 rounded-full"
-                      variants={iconVariants}
-                      whileHover="hover"
-                    >
-                      {metric.icon}
-                    </motion.div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{metric.name}</h3>
-                      <motion.span 
-                        className="text-primary font-bold text-xl"
-                        variants={valueVariants}
-                      >
-                        {metric.value}
-                      </motion.span>
-                    </div>
-                  </div>
-                  
-                  <motion.p 
-                    className="text-white/80"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 + (index * 0.1), duration: 0.6 }}
-                  >
-                    {metric.description}
-                  </motion.p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div variants={sectionVariants}>
-            <motion.h3 
-              className="text-2xl font-semibold mb-8 text-white border-b border-primary/30 pb-2"
-              initial={{ opacity: 0, x: -30 }}
-              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-              transition={{ duration: 0.5 }}
-            >
-              Additional Technical Skills
-            </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {additionalSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.id}
-                  custom={index}
-                  variants={cardVariants}
-                  whileHover="hover"
-                  className="card"
-                >
-                  <div className="flex items-center mb-4">
-                    <motion.div 
-                      className="mr-3 bg-primary/10 p-3 rounded-full"
-                      variants={iconVariants}
-                      whileHover="hover"
-                    >
-                      {skill.icon}
-                    </motion.div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
-                    </div>
-                  </div>
-                  
-                  <motion.p 
-                    className="text-white/80"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 + (index * 0.1), duration: 0.6 }}
-                  >
-                    {skill.description}
-                  </motion.p>
-                </motion.div>
-              ))}
-            </div>
+                <h3 className="text-xl font-bold text-secondary dark:text-light mb-2">{skill.name}</h3>
+                <p className="text-secondary/80 dark:text-light/80 flex-grow">{skill.description}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
