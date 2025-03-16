@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import AudioCTA from '@/components/AudioCTA';
 import WhyMe from '@/components/WhyMe';
 import Skills from '@/components/Skills';
 import SkyboxAdvantage from '@/components/SkyboxAdvantage';
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <AudioCTA />
       <WhyMe />
       <Skills />
       <SkyboxAdvantage />

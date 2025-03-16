@@ -55,6 +55,9 @@ const Header = () => {
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#skybox">Skybox Advantage</NavLink>
           <NavLink href="#value">Value Proposition</NavLink>
+          <NavLink href="/audio-demo" className="bg-primary/20 px-3 py-1 rounded-md hover:bg-primary/30">
+            AI Interviews
+          </NavLink>
           
           <button 
             type="button"
@@ -102,6 +105,9 @@ const Header = () => {
             <MobileNavLink href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</MobileNavLink>
             <MobileNavLink href="#skybox" onClick={() => setMobileMenuOpen(false)}>Skybox Advantage</MobileNavLink>
             <MobileNavLink href="#value" onClick={() => setMobileMenuOpen(false)}>Value Proposition</MobileNavLink>
+            <MobileNavLink href="/audio-demo" onClick={() => setMobileMenuOpen(false)} className="text-primary font-bold">
+              AI Interviews
+            </MobileNavLink>
           </div>
         </motion.div>
       )}

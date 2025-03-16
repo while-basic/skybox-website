@@ -13,6 +13,13 @@ module.exports = {
         accent: '#38BDF8', // Light blue
         dark: '#0F172A',
         light: '#FFFFFF',
+        destructive: '#ff0000',
+        'destructive-foreground': '#ffffff',
+        'primary-foreground': '#ffffff',
+        'secondary-foreground': '#0F172A',
+        background: '#000000',
+        input: '#1f2937',
+        ring: '#0047AB',
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
@@ -31,9 +38,17 @@ module.exports = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
+      borderRadius: {
+        lg: "0.5rem",
+        md: "calc(0.5rem - 2px)",
+        sm: "calc(0.5rem - 4px)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require("tailwindcss-animate")
+  ],
   safelist: [
     'bg-light',
     'bg-dark',
