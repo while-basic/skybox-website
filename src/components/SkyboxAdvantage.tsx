@@ -92,16 +92,16 @@ const SkyboxAdvantage = () => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="card">
-            <h3 className="text-2xl font-semibold mb-6 text-white">How I'll Contribute to Skybox's Success</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-white">How I&apos;ll Contribute to Skybox&apos;s Success</h3>
             <div className="space-y-4">
               <p className="text-white/80">
-                My experience maintaining mission-critical infrastructure with 100% uptime directly aligns with Skybox's commitment to reliability and performance. I understand the demands of high-density computing environments and can help ensure your facilities meet the growing needs of AI and machine learning workloads.
+                My experience maintaining mission-critical infrastructure with 100% uptime directly aligns with Skybox&apos;s commitment to reliability and performance. I understand the demands of high-density computing environments and can help ensure your facilities meet the growing needs of machine learning and high-performance computing workloads.
               </p>
               <p className="text-white/80">
                 With my background in both traditional data center operations and cutting-edge technologies, I can bridge the gap between current infrastructure and future requirements, helping Skybox maintain its competitive edge in the rapidly evolving data center landscape.
               </p>
               <p className="text-white/80">
-                I'm excited about the opportunity to contribute to Skybox's growth and innovation, bringing my unique combination of skills to help drive the company's continued success.
+                I&apos;m excited about the opportunity to contribute to Skybox&apos;s growth and innovation, bringing my unique combination of skills to help drive the company&apos;s continued success.
               </p>
             </div>
           </motion.div>

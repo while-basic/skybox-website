@@ -76,10 +76,10 @@ const AudioCTA = () => {
               <FaHeadphones className="text-primary text-3xl" />
             </motion.div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-              Hear Why I&apos;m the <span className="text-primary">Perfect Fit</span> for Skybox
+              Hear it from the <span className="text-primary">AI&apos;s</span> perspective
             </h2>
             <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-              Listen to these AI-generated interviews highlighting why I&apos;m the perfect fit for Skybox
+              Listen to this AI Podcast snippet showcasing how I bring a powerful mix of skills that perfectly match Skybox&apos;s innovative approach
             </p>
           </motion.div>
 
@@ -98,7 +98,7 @@ const AudioCTA = () => {
                 <AudioPlayer
                   src="/audio/Intro_1.wav"
                   cover="/images/intro.webp"
-                  title="AI Introduction"
+                  title="Technical Introduction"
                 />
               </div>
             </motion.div>
@@ -114,7 +114,7 @@ const AudioCTA = () => {
                 <AudioPlayer
                   src="/audio/Skybox_1.wav"
                   cover="/images/skybox.jpg"
-                  title="AI & Skybox"
+                  title="Advanced Infrastructure Expertise"
                 />
               </div>
             </motion.div>

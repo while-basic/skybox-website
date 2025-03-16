@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaArrowDown, FaServer, FaTools, FaRobot, FaFileDownload } from 'react-icons/fa';
+import { FaArrowDown, FaServer, FaTools, FaRobot, FaFileDownload, FaRegBuilding, FaWrench } from 'react-icons/fa';
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -61,7 +61,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg md:text-xl mb-10 text-white/90 leading-relaxed"
           >
-            Former T5 Data Centers technician with 100% uptime track record, bringing 11+ years of industrial systems experience and cutting-edge AI/ML knowledge to help Skybox lead in next-generation data infrastructure.
+            Former T5 Data Centers technician with 100% uptime track record, bringing 11+ years of industrial systems experience and experience in critical environments and infrastructure to help Skybox lead in next-generation high-performance computing environments.
           </motion.p>
           
           <motion.div 
@@ -77,8 +77,8 @@ const Hero = () => {
               <span>Industrial Automation</span>
             </div>
             <div className="flex items-center text-white">
-              <FaRobot className="text-primary mr-2 text-xl" /> 
-              <span>AI/ML Engineering</span>
+              <FaWrench className="text-primary mr-2 text-xl" /> 
+              <span>Preventative Maintenance</span>
             </div>
           </motion.div>
           
@@ -90,7 +90,7 @@ const Hero = () => {
               href="#why-me" 
               className="btn-primary flex items-center justify-center"
             >
-              Why I'm Perfect for Skybox <FaArrowDown className="ml-2" />
+              Why I&apos;m Perfect for Skybox <FaArrowDown className="ml-2" />
             </a>
             
             <a 

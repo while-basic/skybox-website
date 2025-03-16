@@ -19,12 +19,6 @@ export default function AudioDemo() {
       description: "My Data Center Experience"
     },
     {
-      title: "Red Flags",
-      src: "/audio/Red flag_1.wav",
-      cover: "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?q=80&w=1529&auto=format&fit=crop",
-      description: "Addressing Potential Concerns"
-    },
-    {
       title: "Professional Experience",
       src: "/audio/Professional Experience_1.wav",
       cover: "/images/work-experience.jpg",

@@ -44,7 +44,7 @@ const ValueProposition = () => {
               My Unique <span className="text-primary">Value</span> to Skybox
             </h2>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              With data center experience at T5 and deep knowledge of emerging AI technologies, I offer Skybox a technician who can bridge today's operations with tomorrow's innovations.
+              With data center experience at T5 and deep knowledge of emerging machine learning technologies, I offer Skybox a technician who can bridge today&apos;s operations with tomorrow&apos;s innovations.
             </p>
           </motion.div>
 
@@ -55,10 +55,10 @@ const ValueProposition = () => {
             <motion.div variants={itemVariants} className="card">
               <div className="flex items-center mb-4">
                 <FaBrain className="text-primary text-3xl mr-4" />
-                <h3 className="text-2xl font-semibold text-white">AI Infrastructure Expertise</h3>
+                <h3 className="text-2xl font-semibold text-white">Advanced Computing Infrastructure Expertise</h3>
               </div>
               <p className="text-white/80 mb-4">
-                My hands-on experience with AI systems gives me unique insight into the infrastructure demands of next-generation computing. I understand the cooling, power, and connectivity requirements that AI workloads place on data centers.
+                My hands-on experience with machine learning systems gives me unique insight into the infrastructure demands of next-generation computing. I understand the cooling, power, and connectivity requirements that high-performance computing workloads place on modern data centers.
               </p>
               <ul className="space-y-2 text-white/80">
                 <li className="flex items-start">
@@ -67,7 +67,7 @@ const ValueProposition = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">→</span>
-                  <span>Understanding of GPU infrastructure requirements for AI/ML workloads</span>
+                  <span>Understanding of GPU infrastructure requirements for machine learning workloads</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">→</span>

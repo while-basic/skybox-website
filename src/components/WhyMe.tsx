@@ -52,7 +52,7 @@ const WhyMe = () => {
       id: "automation",
       icon: <FaTools className="text-primary text-3xl" />,
       title: "Industrial Automation",
-      description: "Expertise in automating industrial processes and systems integration",
+      description: "Experience in automating industrial processes and systems integration",
     },
     {
       id: "data",

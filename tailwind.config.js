@@ -8,18 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0047AB', // Skybox blue
+        primary: '#009CDB', // Highlight color for important keywords
         secondary: '#FFFFFF', // White
-        accent: '#38BDF8', // Light blue
-        dark: '#0F172A',
-        light: '#FFFFFF',
+        accent: '#009CDB', // Same as primary for consistency
+        dark: '#000000', // Black for text
+        light: '#FFFFFF', // White for text on dark background
         destructive: '#ff0000',
         'destructive-foreground': '#ffffff',
         'primary-foreground': '#ffffff',
-        'secondary-foreground': '#0F172A',
-        background: '#000000',
-        input: '#1f2937',
-        ring: '#0047AB',
+        'secondary-foreground': '#000000', // Black text on secondary background
+        background: '#000000', // Black background
+        input: '#111111', // Dark input background
+        ring: '#009CDB',
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'Poppins', 'sans-serif'],

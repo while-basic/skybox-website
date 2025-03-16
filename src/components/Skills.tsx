@@ -105,37 +105,37 @@ const Skills = () => {
       id: "datacenter",
       icon: <FaServer className="text-primary text-2xl" />,
       name: "Critical Facilities Management",
-      description: "Comprehensive experience in managing mission-critical data center infrastructure at T5 Data Centers with 100% uptime record. Proficient in implementing redundancy strategies and maintaining operational excellence in high-availability environments."
+      description: "Maintained mission-critical infrastructure with 100% uptime at T5 Data Centers."
     },
     {
       id: "cooling",
       icon: <FaSnowflake className="text-primary text-2xl" />,
       name: "Cooling Systems",
-      description: "In-depth knowledge of precision cooling systems including CRAC/CRAH units, chilled water systems, and in-row cooling solutions. Experience optimizing airflow management through hot/cold aisle containment and implementing efficient cooling strategies to support high-density computing environments while maintaining optimal PUE metrics."
+      description: "Optimized precision cooling systems through hot/cold aisle containment and airflow management."
     },
     {
       id: "power",
       icon: <FaBolt className="text-primary text-2xl" />,
       name: "Power Infrastructure",
-      description: "Extensive experience with power distribution systems including UPS configurations, PDUs, and switchgear. Proficient in managing redundant power architectures (2N, N+1) and implementing power monitoring solutions to ensure continuous operation during critical events."
+      description: "Managed redundant power architectures (2N, N+1) with real-time monitoring."
     },
     {
       id: "network",
       icon: <FaNetworkWired className="text-primary text-2xl" />,
       name: "Network Infrastructure",
-      description: "Strong understanding of data center network topologies, structured cabling systems, and connectivity requirements for high-performance computing. Experience with fiber optic infrastructure, network redundancy planning, and implementing physical layer security measures."
+      description: "Implemented high-performance structured cabling systems and fiber optic ifrastructure."
     },
     {
       id: "security",
       icon: <FaShieldAlt className="text-primary text-2xl" />,
       name: "Physical Security & Compliance",
-      description: "Experience implementing and maintaining physical security protocols in accordance with industry standards (SSAE 18, SOC 2, ISO 27001). Proficient in access control systems, video surveillance, and environmental monitoring to ensure facility integrity and compliance."
+      description: "Deployed integrated access control and environmental monitoring systems."
     },
     {
       id: "monitoring",
       icon: <FaChartLine className="text-primary text-2xl" />,
       name: "Monitoring & DCIM",
-      description: "Skilled in implementing and utilizing Data Center Infrastructure Management (DCIM) tools for real-time monitoring, capacity planning, and predictive maintenance. Experience with BMS integration and developing custom dashboards for operational visibility."
+      description: "Leveraged DCIM tools for real-time monitoring and predictive maintenance."
     }
   ];
 
@@ -152,7 +152,7 @@ const Skills = () => {
           <motion.div variants={sectionVariants} className="text-center mb-16">
             <h2 className="section-title">Technical Expertise</h2>
             <p className="section-subtitle">
-              My specialized skills in data center infrastructure and critical systems management
+              Core competencies in next-gen data center infrastructure and critical systems
             </p>
           </motion.div>
 

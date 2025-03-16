@@ -3,9 +3,8 @@ import Hero from '@/components/Hero';
 import AudioCTA from '@/components/AudioCTA';
 import WhyMe from '@/components/WhyMe';
 import Skills from '@/components/Skills';
-import SkyboxAdvantage from '@/components/SkyboxAdvantage';
 import ValueProposition from '@/components/ValueProposition';
-import CaseStudySolver from '@/components/CaseStudySolver';
+import ThankYou from '@/components/ThankYou';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -13,12 +12,11 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <AudioCTA />
       <WhyMe />
+      <AudioCTA />
       <Skills />
-      <SkyboxAdvantage />
       <ValueProposition />
-      <CaseStudySolver />
+      <ThankYou />
       <Footer />
     </main>
   );

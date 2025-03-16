@@ -45,7 +45,7 @@ const DataCenterDiagram = () => {
       id: "cooling",
       name: "Cooling Infrastructure",
       icon: <FaSnowflake className="text-primary text-3xl" />,
-      description: "Precision cooling systems optimized for high-density AI compute environments.",
+      description: "Precision cooling systems optimized for high-density machine learning compute environments.",
       position: "top-1/4 right-1/4",
       expertise: 90
     },
@@ -53,7 +53,7 @@ const DataCenterDiagram = () => {
       id: "servers",
       name: "Server Infrastructure",
       icon: <FaServer className="text-primary text-3xl" />,
-      description: "High-performance compute clusters including specialized GPU configurations for AI workloads.",
+      description: "High-performance compute clusters including specialized GPU configurations for advanced machine learning workloads.",
       position: "bottom-1/4 left-1/3",
       expertise: 85
     },

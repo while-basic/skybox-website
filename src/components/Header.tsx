@@ -3,13 +3,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
-import { useTheme } from '@/context/ThemeContext';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,33 +51,14 @@ const Header = () => {
         >
           <NavLink href="#why-me">Why Me</NavLink>
           <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#skybox">Skybox Advantage</NavLink>
           <NavLink href="#value">Value Proposition</NavLink>
           <NavLink href="/audio-demo" className="bg-primary/20 px-3 py-1 rounded-md hover:bg-primary/30">
-            AI Interviews
+            Tech Interviews
           </NavLink>
-          
-          <button 
-            type="button"
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
         </motion.nav>
 
-        {/* Mobile Menu Button and Theme Toggle */}
-        <div className="md:hidden flex items-center space-x-2">
-          <button 
-            type="button"
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
-          
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
           <button 
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -103,10 +82,9 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <MobileNavLink href="#why-me" onClick={() => setMobileMenuOpen(false)}>Why Me</MobileNavLink>
             <MobileNavLink href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</MobileNavLink>
-            <MobileNavLink href="#skybox" onClick={() => setMobileMenuOpen(false)}>Skybox Advantage</MobileNavLink>
             <MobileNavLink href="#value" onClick={() => setMobileMenuOpen(false)}>Value Proposition</MobileNavLink>
             <MobileNavLink href="/audio-demo" onClick={() => setMobileMenuOpen(false)} className="text-primary font-bold">
-              AI Interviews
+              Tech Interviews
             </MobileNavLink>
           </div>
         </motion.div>
